@@ -1,4 +1,4 @@
-import './App.css';
+import './src/App.css';
 import React from 'react';
 //import {initux4iot, Ux4iotContext} from "ux4iot-react";
 import 'semantic-ui-css/semantic.css'
@@ -37,8 +37,10 @@ const TelemetryValue = props => {
 
 const DeviceView = () => {
   return <>
-    <TelemetryValue deviceId='simulated-device' label="temp" telemetryKey="temperature" />
-    <TelemetryValue deviceId='simulated-device' label="pressure" telemetryKey="pressure" />
+    <% telemetryItems.forEach(function(item) {  %>
+    <TelemetryValue deviceId='simulated-device' label="temp" telemetryKey="<%= item.telemetryKey %>" />
+
+<% }) %>
   </>
 }
 
