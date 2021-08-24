@@ -1,0 +1,3 @@
+== About
+
+Source of `Thermostat.json`: https://github.com/Azure/opendigitaltwins-dtdl/tree/master/DTDL/v2/samples

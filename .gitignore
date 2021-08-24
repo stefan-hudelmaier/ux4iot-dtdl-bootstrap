@@ -1,0 +1,11 @@
+node_modules
+dist
+yarn-error.log
+*.swp
+.idea
+
+# Separate repo
+managed-application/function/
+example-ui2/
+
+venv
