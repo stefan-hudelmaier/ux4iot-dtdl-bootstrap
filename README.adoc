@@ -1,0 +1,16 @@
+== Workflow
+
+* Work on the React application in `template-ui`. 
+* Once you are satisfied, merge your changes of `App.js` *manually* into `App.ejs`
+* Publish a new version of `generator` which bundles `App.ejs`
+
+== Notes
+
+* Here is the DTDL v2 spec: https://github.com/Azure/opendigitaltwins-dtdl/blob/master/DTDL/v2/dtdlv2.md
+
+== Additional ideas
+
+* Not only support `Telemetry`, but also `Property`. At first read-only properties, later read-write properties.
+  See https://docs.microsoft.com/en-us/azure/iot-develop/concepts-digital-twin?WT.mc_id=IoT-MVP-5004034#read-only-property 
+  and https://docs.microsoft.com/en-us/azure/iot-develop/concepts-convention for the mapping between DTDL and Device Twin.
+* Also support commands
