@@ -13,7 +13,8 @@ For a list of DTDL models of actual hardware look here: https://github.com/Azure
 ## Workflow for updating template
 
 * Work on the React application in `template-ui`. 
-* Once you are satisfied, merge your changes of `App.js` *manually* into `App.ejs`
+* Once you are satisfied, merge your changes of `App.js` *manually* into `App.ejs`, e.g. using 
+  `vimdiff template-ui/App.ejs template-ui/src/App.js`
 * Publish a new version of the bootstrap app which bundles `App.ejs`
 
 ## Planned Features
