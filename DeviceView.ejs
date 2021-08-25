@@ -21,11 +21,10 @@ const TelemetryValue = props => {
 
 const DeviceView = () => {
   return <>
-    <% telemetryItems.forEach(function(item) {  %>
+    <% telemetryItems.forEach(function(item) { -%>
     <TelemetryValue deviceId='simulated-device' label="temp" telemetryKey="<%= item.telemetryKey %>" />
-
-<% }) %>
-  </>
+<% }) -%>
+  </>;
 }
 
 function App() {

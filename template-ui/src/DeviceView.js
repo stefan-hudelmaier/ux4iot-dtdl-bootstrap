@@ -24,7 +24,7 @@ const DeviceView = () => {
   return <>
     <TelemetryValue deviceId='simulated-device' label="temp" telemetryKey="temperature" />
     <TelemetryValue deviceId='simulated-device' label="pressure" telemetryKey="pressure" />
-  </>
+  </>;
 }
 
 function App() {
