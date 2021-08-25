@@ -14,7 +14,7 @@ const argv = yargs(hideBin(process.argv))
     .options({
         o: {
             alias: 'output',
-            default: 'src/App.js',
+            default: 'src/DeviceView.js',
             description: 'the React output'
         },
         i: {
@@ -36,7 +36,7 @@ async function main() {
     const model = JSON.parse(fs.readFileSync(argv.input as string, {encoding: 'utf-8'}));
 	const telemetryItems = model.contents.filter((item: any) => isTelemetry(item));
 
-    const template = fs.readFileSync(path.resolve(__dirname, '../App.ejs'), {encoding: 'utf-8'});
+    const template = fs.readFileSync(path.resolve(__dirname, '../DeviceView.ejs'), {encoding: 'utf-8'});
     const output = ejs.render(template, {
         telemetryItems: [
             {

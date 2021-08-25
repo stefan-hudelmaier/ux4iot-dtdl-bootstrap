@@ -3,7 +3,7 @@
 Run this via npx:
 
 ```
-ux4iot-dtdl-bootstrap --input my-dtdl-model.json --output App.js
+ux4iot-dtdl-bootstrap --input my-dtdl-model.json --output DeviceView.js
 ```
 
 You can find samples for DTDL models here: https://github.com/Azure/opendigitaltwins-dtdl/tree/master/DTDL/v2/samples
@@ -12,10 +12,10 @@ For a list of DTDL models of actual hardware look here: https://github.com/Azure
 
 ## Workflow for updating template
 
-* Work on the React application in `template-ui`. 
-* Once you are satisfied, merge your changes of `template-ui/src/App.js` *manually* into `App.ejs`, e.g. using 
-  `vimdiff App.ejs template-ui/src/App.js`
-* Publish a new version of the bootstrap app which bundles `App.ejs`
+* Work on the React application in `template-ui`. You can work on it using: `npm run start` (with Hot-Reload)
+* Once you are satisfied, merge your changes of `template-ui/src/DeviceView.js` *manually* into `Device.ejs`, e.g. using 
+  `vimdiff DeviceView.ejs template-ui/src/DeviceView.js`
+* Publish a new version of the bootstrap app which bundles `DeviceView.ejs`
 
 ## Planned Features
 
