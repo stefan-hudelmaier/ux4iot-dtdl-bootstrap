@@ -1,27 +1,12 @@
 import './App.css';
 import React from 'react';
-//import {initux4iot, Ux4iotContext} from "ux4iot-react";
+//import * as ux4iot from "ux4iot-react";
+import * as ux4iot from "./fake-ux4iot.js";
 import 'semantic-ui-css/semantic.css'
 import { Statistic } from 'semantic-ui-react'
 
-// Usually this would go through custom backend, not directly to ux4iot
-//const CUSTOM_BACKEND = 'http://ux4iot-a7j2kf3n47mmg.westeurope.azurecontainer.io/admin/token';
-const UX4IOT_URL = 'http://ux4iot-a7j2kf3n47mmg.westeurope.azurecontainer.io';
-//const CUSTOM_BACKEND = 'http://127.0.0.1:8081/admin/token';
-//const UX4IOT_URL = 'http://127.0.0.1:8081';
-
-
-/*
-const ux4iot = initux4iot(UX4IOT_URL, localAccessRequest => {
-  return axios.put(CUSTOM_BACKEND, localAccessRequest, {
-    headers: {
-      //Authorization: "Bearer 4322923"
-    }
-  })
-});
- */
-
-//const ux4iot = initux4iot(UX4IOT_URL, null, 'rt-123456789');
+const UX4IOT_ADMIN_CONNECTION_STRING = "<YOUR ADMIN CONNECTION STRING";
+const ux4iotClient = ux4iot.initDevMode(UX4IOT_ADMIN_CONNECTION_STRING);
 
 const useTelemetry = () => {
   return 42.0
@@ -46,13 +31,9 @@ function App() {
 
   return (
     <div className="App">
-{/*
-      <Ux4iotContext.Provider value={ux4iot}>
-*/}
+      <ux4iot.Context.Provider value={ux4iotClient}>
         <DeviceView />
-{/*
-      </Ux4iotContext.Provider>
-*/}
+      </ux4iot.Context.Provider>
     </div>
   );
 }
