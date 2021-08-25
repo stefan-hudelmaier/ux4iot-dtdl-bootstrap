@@ -1,4 +1,3 @@
-import './App.css';
 import React from 'react';
 //import * as ux4iot from "ux4iot-react";
 import * as ux4iot from "./fake-ux4iot.js";
@@ -38,4 +37,4 @@ function App() {
   );
 }
 
-export default App;
+export default DeviceView;

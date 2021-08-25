@@ -23,4 +23,3 @@ For a list of DTDL models of actual hardware look here: https://github.com/Azure
   See https://docs.microsoft.com/en-us/azure/iot-develop/concepts-digital-twin?WT.mc_id=IoT-MVP-5004034#read-only-property 
   and https://docs.microsoft.com/en-us/azure/iot-develop/concepts-convention for the mapping between DTDL and Device Twin.
 * Also support commands
-* Support URLs for DTDL models
