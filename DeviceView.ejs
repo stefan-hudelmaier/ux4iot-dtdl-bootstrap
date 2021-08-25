@@ -6,10 +6,6 @@ import { Statistic } from 'semantic-ui-react'
 const UX4IOT_ADMIN_CONNECTION_STRING = "<YOUR ADMIN CONNECTION STRING";
 const ux4iotClient = ux4iot.initDevMode(UX4IOT_ADMIN_CONNECTION_STRING);
 
-const useTelemetry = () => {
-  return 42.0
-}
-
 const TelemetryValue = props => {
   const value = useTelemetry(props.deviceId, props.telemetryKey);
   return <Statistic>
