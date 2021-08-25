@@ -1,0 +1,6 @@
+src/App.js
+.idea
+*.iml
+src/*
+.prettierrc.js
+template-ui/
