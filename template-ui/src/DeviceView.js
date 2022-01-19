@@ -13,23 +13,16 @@ const TelemetryValue = props => {
   </Statistic>;
 }
 
-const DeviceView = () => {
-  return <>
-    <TelemetryValue deviceId='simulated-device' label="temp" telemetryKey="temperature" />
-    <TelemetryValue deviceId='simulated-device' label="pressure" telemetryKey="pressure" />
-  </>;
-}
-
-function App() {
+function DeviceView() {
 
   return (
-    <div className="App">
-      <Ux4iotContextProvider
-        options={{ adminConnectionString: UX4IOT_ADMIN_CONNECTION_STRING }}>
-        <DeviceView />
-      </Ux4iotContextProvider>
-    </div>
+    <Ux4iotContextProvider
+      options={{ adminConnectionString: UX4IOT_ADMIN_CONNECTION_STRING }}>
+
+      <TelemetryValue deviceId='simulated-device' label="temp" telemetryKey="temperature" />
+      <TelemetryValue deviceId='simulated-device' label="pressure" telemetryKey="pressure" />
+    </Ux4iotContextProvider>
   );
 }
 
-export default App;
+export default DeviceView;

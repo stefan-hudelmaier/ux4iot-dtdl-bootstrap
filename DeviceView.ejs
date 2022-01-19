@@ -13,23 +13,17 @@ const TelemetryValue = props => {
   </Statistic>;
 }
 
-const DeviceView = () => {
-  return <>
-    <% telemetryItems.forEach(function(item) { -%>
-    <TelemetryValue deviceId='<%= deviceId %>' label="<%= item.displayName ? item.displayName : item.name %>" telemetryKey="<%= item.name %>" />
-<% }) -%>
-  </>;
-}
-
-function App() {
+function DeviceView() {
 
   return (
-    <div className="App">
-      <Ux4iotContextProvider
-        options={{ adminConnectionString: UX4IOT_ADMIN_CONNECTION_STRING }}>
-        <DeviceView />
-      </Ux4iotContextProvider>
-    </div>
+    <Ux4iotContextProvider
+      options={{ adminConnectionString: UX4IOT_ADMIN_CONNECTION_STRING }}>
+
+      <% telemetryItems.forEach(function(item) { -%>
+      <TelemetryValue deviceId='<%= deviceId %>' label="<%= item.displayName ? item.displayName : item.name %>" telemetryKey="<%= item.name %>" />
+      <% }) -%>
+
+    </Ux4iotContextProvider>
   );
 }
 
